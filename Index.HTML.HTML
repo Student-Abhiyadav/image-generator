@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personality Detection</title>
+    <link rel="stylesheet" href="Personality.CSS">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <section>
+    <h1>WHAT DOES YOUR NAME SAY ABOUT YOUR PERSONALITY ?</h1>
+    <div class="centerDiv">
+        <div class="detalis">
+            <label>ENTER YOUR NAME</label>
+            <br>
+            <input type="text" name="" id="nameid">
+        </div>
+
+        <div class="imgdiv">
+            <img src="Personality.png" width="200" height="200" class="imgchange">
+
+        </div>
+        <button> Click Me</button>
+    </div>
+    </section>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>      <!--integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>-->
+<script>
+    $(document).ready(function(){
+        $('button').click(function(){
+            const name = $('#nameid').val();
+            alert(name);
+            $('.imgchange').attr('src',`https://joesch.moe/api/v1/${name}`);
+        });
+    });
+</script>
+
+</html>
